@@ -1,75 +1,31 @@
-﻿# How to Run Your E-Portfolio - Quick Guide
+# How to Run Your E-Portfolio HTML Code
 
-## File Setup
+## Simple Step-by-Step Guide
 
+### 1. Save the HTML Code
+1. Copy all the HTML code I provided earlier
+2. Open a text editor (like Notepad, VS Code, or TextEdit)
+3. Paste the code into the text editor
+4. Save the file as `index.html` (make sure to select "All Files" as file type if using Notepad)
+
+### 2. Create Images Folder
+1. Create a new folder named `images` in the same location as your HTML file
+2. Place your profile picture in this folder
+3. Rename your profile picture to `profile.jpg` (or update the code with your actual filename)
+
+### 3. Run the E-Portfolio
+1. Simply double-click the `index.html` file you saved
+2. It will automatically open in your default web browser
+3. You should now see your complete e-portfolio
+
+## Folder Structure
+Make sure your files are organized like this:
 ```
 your-folder/
-├── index.html           (Your main HTML file)
+├── index.html
 └── images/
-    └── profile.jpg      (Your profile picture)
+    └── profile.jpg
 ```
 
-## Opening Your E-Portfolio Locally
 
-1. Make sure your files are organized as shown above
-2. Simply double-click the `index.html` file to open it in your web browser
-3. You should see your complete e-portfolio with your profile picture
-
-## Hosting Options
-
-### Option 1: GitHub Pages (Professional)
-
-1. Create a GitHub account at [github.com](https://github.com)
-2. Create a new repository named `yourusername.github.io`
-3. Upload your files:
-   - Click "Add file" > "Upload files"
-   - Drag your index.html and images folder
-   - Click "Commit changes"
-4. Your site will be live at `https://yourusername.github.io`
-
-### Option 2: Netlify Drop (Easiest)
-
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag and drop your folder containing index.html and the images folder
-3. Wait a few seconds - you'll get a unique URL
-4. Your site is now online!
-
-### Option 3: Google Drive (Simple Sharing)
-
-1. Zip your files:
-   - Right-click your folder
-   - Select "Send to" > "Compressed (zipped) folder"
-2. Upload to Google Drive:
-   - Go to [drive.google.com](https://drive.google.com)
-   - Upload the zip file
-   - Right-click the file > "Share" > "Anyone with the link"
-3. Share the link with your instructor
-
-## Troubleshooting
-
-### Profile Picture Not Showing?
-
-- Make sure the "images" folder is in the same folder as the HTML file
-- Verify the image is named exactly "profile.jpg"
-- If using another name, update the HTML code:
-  ```html
-  <img
-    src="images/your-actual-filename.jpg"
-    alt="Angelo R Depamaylo"
-    class="profile-image"
-  />
-  ```
-
-### Images in Activities Not Showing?
-
-- Check that all Imgur links are direct image links (should end with .jpg, .png, etc.)
-- For any broken image, right-click the broken image icon > "Copy image address"
-- Replace the old link with the new one in your HTML code
-
-## Submission
-
-- Make sure your e-portfolio is accessible online
-- Test the link in an incognito/private browser window before submitting
-- Include the link in your submission according to your instructor's requirements
-
-Need more help? Contact your instructor or IT support at your school.
+That's it! No need to install any software or set up servers - just save the HTML file and open it in your browser.
