@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelo R Depamaylo - E-Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      :root {
+        --primary: #3a86ff;
+        --secondary: #8338ec;
+        --dark: #1a1a2e;
+        --light: #ffffff;
+        --accent: #ff006e;
+        --background: #f8f9fa;
+        --card-bg: #ffffff;
+        --text: #333333;
+        --light-text: #6c757d;
+        --border-radius: 12px;
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --hover-transform: translateY(-8px);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--text);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 85%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 20px;
+        color: var(--dark);
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h2 {
+        font-size: 2rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        border-radius: 2px;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        color: var(--primary);
+      }
+
+      p {
+        margin-bottom: 20px;
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+      }
+
+      section {
+        margin-bottom: 60px;
+        background-color: var(--card-bg);
+        padding: 40px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      section:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Navigation Styles */
+      nav {
+        background-color: var(--light);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav ul li a {
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 8px 0;
+      }
+
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        transition: width 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary);
+      }
+
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--dark);
+      }
+
+      /* Header Styles */
+      header {
+        text-align: center;
+        padding: 120px 0 80px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: var(--light);
+        margin-bottom: 60px;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("https://i.imgur.com/8PEw5fF.jpg") center/cover
+          no-repeat;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      header .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        -webkit-text-fill-color: var(--light);
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .profile-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .profile-image-container {
+        position: relative;
+        width: 220px;
+        height: 220px;
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--light);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .profile-image:hover {
+        transform: scale(1.05);
+      }
+
+      .profile-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      /* Activities Styles */
+      .activity-card {
+        background-color: var(--card-bg);
+        border-radius: var(--border-radius);
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-top: 5px solid transparent;
+        border-image: linear-gradient(90deg, var(--primary), var(--secondary));
+        border-image-slice: 1;
+      }
+
+      .activity-card:hover {
+        transform: var(--hover-transform);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .activity-card h3 {
+        color: var(--primary);
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .activity-card h3 i {
+        margin-right: 10px;
+        color: var(--accent);
+      }
+
+      .activity-meta {
+        display: inline-block;
+        font-size: 0.9rem;
+        color: var(--light-text);
+        margin-bottom: 15px;
+        padding: 5px 15px;
+        background-color: rgba(131, 56, 236, 0.1);
+        border-radius: 20px;
+      }
+
+      /* Image Gallery */
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+
+      .gallery-link {
+        display: block;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+      }
+
+      .gallery-link::before {
+        content: "View Full Size";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(58, 134, 255, 0.8);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+      }
+
+      .gallery-link:hover::before {
+        opacity: 1;
+      }
+
+      .gallery-link:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-link:hover .gallery-img {
+        transform: scale(1.1);
+      }
+
+      /* Reflection Styles */
+      .reflection-card {
+        background-color: var(--card-bg);
+        border-left: 5px solid var(--primary);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s ease;
+      }
+
+      .reflection-card:hover {
+        transform: translateX(10px);
+      }
+
+      .reflection-card h3 {
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+      }
+
+      .reflection-card h3 i {
+        margin-right: 10px;
+        color: var(--accent);
+      }
+
+      /* Overall Reflection Styles */
+      .reflection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .reflection-item {
+        background: var(--card-bg);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        transition: transform 0.3s ease;
+      }
+
+      .reflection-item:hover {
+        transform: var(--hover-transform);
+      }
+
+      .reflection-item h3 {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
+
+      .reflection-item h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--primary);
+      }
+
+      /* Footer Styles */
+      footer {
+        text-align: center;
+        padding: 50px 0;
+        background: linear-gradient(135deg, var(--dark), #2c3e50);
+        color: var(--light);
+        margin-top: 60px;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+      }
+
+      .footer-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 25px 0;
+      }
+
+      .social-links a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: var(--light);
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .back-to-top {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 25px;
+        background: var(--primary);
+        color: var(--light);
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-to-top:hover {
+        background: var(--secondary);
+        transform: translateY(-5px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .container {
+          width: 90%;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          width: 95%;
+          padding: 15px;
+        }
+
+        section {
+          padding: 30px 20px;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+
+        nav ul {
+          position: fixed;
+          top: 70px;
+          right: -100%;
+          flex-direction: column;
+          background: var(--light);
+          width: 80%;
+          height: calc(100vh - 70px);
+          padding: 30px;
+          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+          transition: right 0.3s ease;
+          gap: 15px;
+          align-items: flex-start;
+        }
+
+        nav ul.active {
+          right: 0;
+        }
+
+        header {
+          padding: 80px 0 60px;
+        }
+
+        header h1 {
+          font-size: 2rem;
+        }
+
+        .profile-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .profile-image-container {
+          margin: 0 auto;
+        }
+
+        .image-gallery {
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+
+        .gallery-img {
+          height: 150px;
+        }
+
+        .reflection-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <a href="#" class="logo">AD</a>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="#activities"><i class="fas fa-tasks"></i> Activities</a>
+          </li>
+          <li>
+            <a href="#reflections"
+              ><i class="fas fa-comment-alt"></i> Reflections</a
+            >
+          </li>
+          <li>
+            <a href="#overall-reflection"
+              ><i class="fas fa-lightbulb"></i> Overall Reflection</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Angelo R Depamaylo's E-Portfolio</h1>
+        <p>BSInfotech 3A | Rizal Course - Spring Semester 2025</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Profile Section -->
+      <section id="profile">
+        <h2>Profile</h2>
+        <div class="profile-container">
+          <div class="profile-image-container">
+            <img
+              src="images/profile.jpg"
+              alt="Angelo R Depamaylo"
+              class="profile-image"
+            />
+          </div>
+          <div class="profile-text">
+            <h3><i class="fas fa-user-circle"></i> Personal Introduction</h3>
+            <p>
+              Hello! I am Angelo R Depamaylo, a passionate and dedicated student
+              interested in both information technology and Philippine history.
+              I'm enthusiastic about learning how historical figures like Jose
+              Rizal have shaped our national identity and how their lessons can
+              be applied in modern contexts, particularly in the digital age.
+            </p>
+
+            <h3><i class="fas fa-graduation-cap"></i> Academic Background</h3>
+            <p>
+              I am currently in my third year (3A) of the Bachelor of Science in
+              Information Technology program at our university. My academic
+              interests include software development, data analysis, and digital
+              humanities. I have a particular interest in how technology can
+              help preserve and communicate our cultural heritage.
+            </p>
+
+            <h3><i class="fas fa-bullseye"></i> Course Goals</h3>
+            <p>
+              Through this course on Jose Rizal, I aim to gain a deeper
+              understanding of his life, works, and significant contribution to
+              Philippine history and identity. I hope to explore how his ideals
+              of education, reform, and national pride can be relevant to modern
+              Filipino technologists like myself. Additionally, I wish to
+              develop critical thinking skills by analyzing historical contexts
+              and their impact on contemporary society.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activities Section -->
+      <section id="activities">
+        <h2>Course Activities</h2>
+
+        <!-- Activity 1 -->
+        <div class="activity-card">
+          <h3>
+            <i class="fas fa-pen"></i> Activity 1: Essay on Studying Rizal
+          </h3>
+          <div class="activity-meta">
+            <i class="far fa-calendar-alt"></i> February 6, 2025 (submitted
+            late)
+          </div>
+          <p>
+            This activity required writing a 300-word essay on the importance of
+            studying the life, works, and writing of Dr. Jose Rizal. I explored
+            how Rizal's contributions to Philippine literature, social reform,
+            and national identity continue to be relevant for modern Filipino
+            students.
+          </p>
+          <p>
+            <strong>Summary:</strong> In my essay, I discussed how studying
+            Rizal provides crucial insights into Philippine history during the
+            Spanish colonial period and the emergence of Filipino nationalism. I
+            emphasized how Rizal's works like "Noli Me Tangere" and "El
+            Filibusterismo" served as powerful social commentaries that awakened
+            national consciousness. Furthermore, I explored how his ideals of
+            education, peaceful reform, and cultural pride offer valuable
+            lessons for contemporary Filipino society. I concluded by reflecting
+            on how Rizal's multifaceted talents as a writer, scientist, artist,
+            and polyglot exemplify the kind of holistic excellence that today's
+            students should aspire to achieve.
+          </p>
+          <div class="image-gallery">
+            <a
+              href="https://i.imgur.com/VeGv6UY.jpg"
+              target="_blank"
+              class="gallery-link"
+            >
+              <img
+                src="https://i.imgur.com/VeGv6UY.jpg"
+                alt="Essay - Page 1"
+                class="gallery-img"
+              />
+            </a>
+            <a
+              href="https://i.imgur.com/OILa0Us.jpg"
+              target="_blank"
+              class="gallery-link"
+            >
+              <img
+                src="https://i.imgur.com/OILa0Us.jpg"
+                alt="Essay - Page 2"
+                class="gallery-img"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="activity-card">
+          <h3>
+            <i class="fas fa-book"></i> Activity 2: Analysis of the Rizal Bill
+          </h3>
+          <div class="activity-meta">
+            <i class="far fa-calendar-alt"></i> February 18, 2025
+          </div>
+          <p>
+            This activity required researching and answering questions about the
+            Rizal Bill, including its sponsorship in Congress, arguments
+            supporting it, and opposition against it.
+          </p>
+          <p>
+            <strong>Summary:</strong> In my response, I detailed how Senator
+            Claro M. Recto was the primary sponsor of the Rizal Bill (Republic
+            Act 1425) in Congress. The bill, which mandated the teaching of
+            Rizal's life and works in all schools, was supported with arguments
+            that emphasized the need to instill patriotism, promote national
+            identity, and preserve cultural heritage among Filipino students.
+            Supporters believed that Rizal's writings offered important insights
+            into Philippine history and inspired critical thinking about social
+            issues. Opposition to the bill came primarily from religious
+            sectors, particularly the Catholic Church, which expressed concerns
+            about Rizal's critical portrayal of the clergy in his novels and
+            worried about potential anti-Catholic sentiment. Some critics also
+            questioned the focus on a single national hero at the expense of
+            others. Despite this opposition, the bill was passed in 1956 and
+            remains a cornerstone of Philippine education policy.
+          </p>
+          <div class="image-gallery">
+            <a
+              href="https://i.imgur.com/xZXFMAs.jpg"
+              target="_blank"
+              class="gallery-link"
+            >
+              <img
+                src="https://i.imgur.com/xZXFMAs.jpg"
+                alt="Rizal Bill Analysis - Page 1"
+                class="gallery-img"
+              />
+            </a>
+            <a
+              href="https://i.imgur.com/zxxrjX7.jpg"
+              target="_blank"
+              class="gallery-link"
+            >
+              <img
+                src="https://i.imgur.com/zxxrjX7.jpg"
+                alt="Rizal Bill Analysis - Page 2"
+                class="gallery-img"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="activity-card">
+          <h3>
+            <i class="fas fa-history"></i> Activity 3: Philippine Heroes
+            Analysis
+          </h3>
+          <div class="activity-meta">
+            <i class="far fa-calendar-alt"></i> February 18, 2025
+          </div>
+          <p>
+            This activity examined the concept of "Pangangayaw" and analyzed the
+            criteria for recognizing national heroes in the context of Dr. Jose
+            Rizal and other Filipino revolutionary figures.
+          </p>
+          <p>
+            <strong>Summary:</strong> In my analysis, I explored how
+            "Pangangayaw" refers to pre-colonial Filipino maritime raids or
+            expeditions that demonstrated bravery and leadership, establishing
+            historical precedents for recognizing heroism in Philippine culture.
+            The three main criteria for recognizing heroes that were established
+            during the American colonial period included: significant
+            contribution to nation-building, exemplary moral character, and
+            international recognition. Dr. Jose Rizal fulfilled these criteria
+            through his literary works that inspired nationalism, his peaceful
+            advocacy for reform, and his recognition by international scholars
+            and leaders. By contrast, revolutionary figures like Gregorio del
+            Pilar, Andrés Bonifacio, and Emilio Aguinaldo were not officially
+            designated as national heroes based on American criteria because
+            their revolutionary activities were seen as potentially inspiring
+            continued resistance against American rule, their methods involved
+            armed struggle rather than peaceful reform, and they lacked the same
+            level of international recognition as Rizal. This selective
+            heroification revealed how the American colonial government
+            strategically promoted Rizal as a model of peaceful reform rather
+            than revolutionary resistance.
+          </p>
+          <div class="image-gallery">
+            <a
+              href="https://i.imgur.com/LXmJ9XS.jpg"
+              target="_blank"
+              class="gallery-link"
+            >
+              <img
+                src="https://i.imgur.com/LXmJ9XS.jpg"
+                alt="Heroes Analysis - Page 1"
+                class="gallery-img"
+              />
+            </a>
+            <a
+              href="https://i.imgur.com/xZXFMAs.jpg"
+              target="_blank"
+              class="gallery-link"
+            >
+              <img
+                src="https://i.imgur.com/xZXFMAs.jpg"
+                alt="Heroes Analysis - Page 2"
+                class="gallery-img"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflections per Report Section -->
+      <section id="reflections">
+        <h2>Reflections on Major Reports</h2>
+
+        <!-- Reflection 1 -->
+        <div class="reflection-card">
+          <h3>
+            <i class="fas fa-puzzle-piece"></i> Reflection on Report 1: WHO is
+            Rizal
+          </h3>
+          <p>
+            This report deepened my understanding of Jose Rizal as a
+            multifaceted historical figure beyond the one-dimensional portrayal
+            often presented in basic education. I learned that Rizal was not
+            just a writer and national hero, but also a physician, linguist,
+            artist, scientist, and global traveler whose worldview was shaped by
+            his experiences across Europe and Asia.
+          </p>
+          <p>
+            What surprised me most was discovering the complexity of Rizal's
+            personal life and relationships, including his connections with
+            family members and romantic partners, which humanized him beyond his
+            heroic image. I also gained new perspective on how his educational
+            background in Europe influenced his progressive ideas about social
+            reform, science, and education.
+          </p>
+          <p>
+            This report challenged me to think more critically about how we
+            construct national heroes and the importance of understanding
+            historical figures within their complete context. As an InfoTech
+            student, it made me reflect on how digital archives and resources
+            can help preserve and provide access to primary sources that reveal
+            more nuanced understandings of historical figures like Rizal.
+          </p>
+        </div>
+
+        <!-- Reflection 2 -->
+        <div class="reflection-card">
+          <h3>
+            <i class="fas fa-chart-line"></i> Reflection on Report 2: Leadership
+            in Rizal
+          </h3>
+          <p>
+            Exploring Rizal's leadership qualities provided me with valuable
+            insights into different models of influence and advocacy. What stood
+            out to me was how Rizal led primarily through intellectual and moral
+            influence rather than direct political or military command,
+            demonstrating how writing, education, and personal example can be
+            powerful tools for social change.
+          </p>
+          <p>
+            I was particularly struck by Rizal's commitment to education as a
+            vehicle for national development and his belief that enlightening
+            minds was the first step toward meaningful reform. His focus on
+            developing critical thinking skills among his countrymen rather than
+            simply inspiring rebellion showed remarkable foresight and strategic
+            thinking.
+          </p>
+          <p>
+            This report has influenced my own approach to leadership as a
+            technology student. In collaborative projects, I now appreciate how
+            sharing knowledge, maintaining ethical standards, and communicating
+            ideas clearly can be more effective than simply directing others.
+            Rizal's example has encouraged me to consider how my technical
+            skills could be used to address social challenges and contribute to
+            community development, much as he used his medical training to serve
+            his hometown of Calamba.
+          </p>
+        </div>
+      </section>
+
+      <!-- Overall Reflection Section -->
+      <section id="overall-reflection">
+        <h2>Overall Course Reflection</h2>
+
+        <div class="reflection-grid">
+          <div class="reflection-item">
+            <h3>
+              <i class="fas fa-seedling"></i> Personal and Academic Growth
+            </h3>
+            <p>
+              This course has transformed my understanding of Jose Rizal from a
+              distant historical figure to a complex individual whose ideas and
+              actions continue to be relevant today. Academically, I've
+              developed stronger research skills and critical analysis abilities
+              by examining historical documents and diverse perspectives on
+              Rizal's life and legacy.
+            </p>
+            <p>
+              On a personal level, studying Rizal has inspired me to embrace a
+              more holistic approach to education. His example as a polymath who
+              excelled in sciences, arts, and humanities has motivated me to
+              expand my interests beyond my technical major and seek connections
+              between technology and cultural heritage.
+            </p>
+          </div>
+
+          <div class="reflection-item">
+            <h3>
+              <i class="fas fa-lightbulb"></i> Major Learnings and Turning
+              Points
+            </h3>
+            <p>
+              The most significant turning point came when we analyzed how the
+              American colonial government selectively promoted Rizal while
+              downplaying revolutionary figures. This made me realize how
+              history is often shaped by political agendas and how critical it
+              is to examine historical narratives from multiple perspectives.
+            </p>
+            <p>
+              Another crucial learning was recognizing Rizal's remarkable
+              foresight about the importance of education and scientific
+              thinking for national development. His emphasis on intellectual
+              advancement rather than mere political independence helped me
+              understand that meaningful change requires building capacity and
+              fostering critical thinking.
+            </p>
+          </div>
+
+          <div class="reflection-item">
+            <h3><i class="fas fa-route"></i> Future Impact</h3>
+            <p>
+              The lessons from this course will influence my approach to my
+              information technology career. I plan to explore opportunities to
+              apply my technical skills to projects that preserve and promote
+              Philippine cultural heritage, perhaps through digital archives or
+              educational applications about historical figures like Rizal.
+            </p>
+            <p>
+              Additionally, Rizal's commitment to lifelong learning and
+              intellectual excellence will guide my professional development.
+              Beyond technical skills, I aim to develop stronger communication
+              abilities, cultural awareness, and ethical reasoning – recognizing
+              that technology professionals need these broader competencies to
+              create solutions that truly serve human needs.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Angelo R Depamaylo</h3>
+          <p>BSInfotech 3A | Rizal Course - Spring Semester 2025</p>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+
+          <p>Last Updated: May 2025</p>
+          <a href="#" class="back-to-top"
+            >Back to Top <i class="fas fa-arrow-up"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.querySelector(".mobile-menu");
+      const navMenu = document.querySelector("nav ul");
+
+      menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll("nav a, .back-to-top").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          } else {
+            document.querySelector(targetId).scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+
+          // Close mobile menu if open
+          if (navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+          }
+        });
+      });
+
+      // Add animation on scroll
+      const revealElements = document.querySelectorAll(
+        "section, .reflection-card, .activity-card"
+      );
+
+      function checkReveal() {
+        for (let i = 0; i < revealElements.length; i++) {
+          const windowHeight = window.innerHeight;
+          const elementTop = revealElements[i].getBoundingClientRect().top;
+          const elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            revealElements[i].classList.add("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", checkReveal);
+      checkReveal();
+    </script>
+  </body>
+</html>
