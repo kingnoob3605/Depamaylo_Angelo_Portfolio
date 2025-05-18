@@ -8,10 +8,6 @@
 3. Paste the code into the text editor
 4. Save the file as `index.html` (make sure to select "All Files" as file type if using Notepad)
 
-### 2. Create Images Folder
-1. Create a new folder named `images` in the same location as your HTML file
-2. Place your profile picture in this folder
-3. Rename your profile picture to `profile.jpg` (or update the code with your actual filename)
 
 ### 3. Run the E-Portfolio
 1. Simply double-click the `index.html` file you saved
